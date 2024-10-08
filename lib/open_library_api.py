@@ -1,7 +1,6 @@
 import requests
 import json
 
-
 class Search:
 
     def get_search_results(self):
@@ -9,8 +8,7 @@ class Search:
 
         search_term_formatted = search_term.replace(" ", "+")
         fields = ["title", "author_name"]
-        # formats the list into a comma separated string
-        # output: "title,author_name"
+
         fields_formatted = ",".join(fields)
         limit = 1
 
@@ -45,8 +43,6 @@ class Search:
         return response_formatted
 
 
-# results = Search().get_search_results()
-# print(results)
 
 # results_json = Search().get_search_results_json()
 # print(json.dumps(results_json, indent=1))
